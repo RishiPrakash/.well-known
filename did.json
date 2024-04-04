@@ -1,0 +1,48 @@
+{
+  "id": "did:web:www.google.com",
+  "@context": [
+    "https://www.w3.org/ns/did/v1",
+    {
+      "@base": "did:web:www.google.com"
+    }
+  ],
+  "service": [
+    {
+      "id": "#linkeddomains",
+      "type": "LinkedDomains",
+      "serviceEndpoint": {
+        "origins": [
+          "https://www.google.com/"
+        ]
+      }
+    },
+    {
+      "id": "#hub",
+      "type": "IdentityHub",
+      "serviceEndpoint": {
+        "instances": [
+          "https://hub.did.msidentity.com/v1.0/6c6ffb6b-8a37-42c1-8535-c5336f39e576"
+        ]
+      }
+    }
+  ],
+  "verificationMethod": [
+    {
+      "id": "#bae1cb888e7e4e2fa52180d8185dad54vcSigningKey-ace7e",
+      "controller": "did:web:www.google.com",
+      "type": "JsonWebKey2020",
+      "publicKeyJwk": {
+        "crv": "P-256",
+        "kty": "EC",
+        "x": "l4H0NO9YtEMZApYhk0HNBkHQHnkFDMezyBGnq2K-4oU",
+        "y": "PUZs_mIu0AlJmAuQsByyQRvD9ofO-iCry4dYvedKJpE"
+      }
+    }
+  ],
+  "authentication": [
+    "#bae1cb888e7e4e2fa52180d8185dad54vcSigningKey-ace7e"
+  ],
+  "assertionMethod": [
+    "#bae1cb888e7e4e2fa52180d8185dad54vcSigningKey-ace7e"
+  ]
+}
